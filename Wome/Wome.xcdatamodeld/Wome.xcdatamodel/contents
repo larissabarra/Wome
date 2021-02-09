@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cervix" representedClassName="Cervix" syncable="YES" codeGenerationType="class">
+        <attribute name="cervixPosition" optional="YES" attributeType="String"/>
+        <attribute name="cervixSoftness" optional="YES" attributeType="String"/>
+        <attribute name="cervixTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Day" representedClassName="Day" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isPeakDay" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="timezone" optional="YES" attributeType="String"/>
+        <relationship name="cervix" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cervix"/>
+        <relationship name="temperature" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Temperature"/>
+    </entity>
+    <entity name="Temperature" representedClassName="Temperature" syncable="YES" codeGenerationType="class">
+        <attribute name="measurementTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="unit" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Cervix" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Temperature" positionX="-54" positionY="63" width="128" height="88"/>
+        <element name="Day" positionX="-36" positionY="63" width="128" height="133"/>
+    </elements>
 </model>
