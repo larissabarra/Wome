@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tabSelection = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $tabSelection) {
+            TodayView()
+                .tabItem {
+                    Label("Today", systemImage: "thermometer")
+                }
+                .tag(0)
+         
+            Text("Chart Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Label("Chart", systemImage: "calendar")
+                }
+                .tag(1)
+        }
     }
 }
 
