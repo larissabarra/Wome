@@ -17,6 +17,7 @@
 		4EB5C12525D1F0C500D9B8C4 /* WomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C12425D1F0C500D9B8C4 /* WomeTests.swift */; };
 		4EB5C13025D1F0C500D9B8C4 /* WomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C12F25D1F0C500D9B8C4 /* WomeUITests.swift */; };
 		4EB5C14125D32EB800D9B8C4 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C14025D32EB800D9B8C4 /* TodayView.swift */; };
+		4EB5C15725D45B2E00D9B8C4 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C15625D45B2E00D9B8C4 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4EB5C12F25D1F0C500D9B8C4 /* WomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomeUITests.swift; sourceTree = "<group>"; };
 		4EB5C13125D1F0C500D9B8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB5C14025D32EB800D9B8C4 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		4EB5C15625D45B2E00D9B8C4 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				4EB5C10E25D1F0C400D9B8C4 /* ContentView.swift */,
 				4EB5C14025D32EB800D9B8C4 /* TodayView.swift */,
+				4EB5C15625D45B2E00D9B8C4 /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				4EB5C10B25D1F0C400D9B8C4 /* AppDelegate.swift in Sources */,
 				4EB5C11225D1F0C400D9B8C4 /* Wome.xcdatamodeld in Sources */,
+				4EB5C15725D45B2E00D9B8C4 /* ChartView.swift in Sources */,
 				4EB5C10D25D1F0C400D9B8C4 /* SceneDelegate.swift in Sources */,
 				4EB5C14125D32EB800D9B8C4 /* TodayView.swift in Sources */,
 				4EB5C10F25D1F0C400D9B8C4 /* ContentView.swift in Sources */,
@@ -454,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Wome/Preview Content\"";
+				DEVELOPMENT_TEAM = AZS8FWUU79;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Wome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,6 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Wome/Preview Content\"";
+				DEVELOPMENT_TEAM = AZS8FWUU79;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Wome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
