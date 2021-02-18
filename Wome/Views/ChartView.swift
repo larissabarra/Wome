@@ -32,6 +32,15 @@ struct ChartView: View {
     }
   }
   
+  var numberFormat: String {
+    get {
+      if temperatureUnit.symbol == UnitTemperature.celsius.symbol {
+        return "%.2f"
+      }
+      return "%.1f"
+    }
+  }
+  
   var body: some View {
     GeometryReader { geometry in
       VStack {
@@ -40,23 +49,46 @@ struct ChartView: View {
           Text(UnitTemperature.fahrenheit.symbol).tag(UnitTemperature.fahrenheit)
         }
         .pickerStyle(SegmentedPickerStyle())
-        Spacer()
         
         ScrollView(.horizontal) {
-          ZStack {
-            Grid(min: self.min, max: self.max, length: self.cycleLength)
-              .stroke(Color.gray.opacity(0.5), lineWidth: 1)
-              .frame(width: geometry.size.width * self.zoom - 34,
-                     height: geometry.size.width * 9 / 16,
-                     alignment: .center)
-              .aspectRatio(contentMode: .fit)
-            LineGraph(dataPoints: temperatureData(unit: temperatureUnit), length: self.cycleLength)
-              .stroke(Color.red, lineWidth: 2)
-              .frame(width: geometry.size.width * self.zoom - 34,
-                     height: geometry.size.width * 9 / 16,
-                     alignment: .center)
-              .aspectRatio(contentMode: .fit)
-              .border(Color.accentColor, width: 1)
+          VStack(alignment: .trailing, spacing: 2) {
+            HStack(spacing: 2){
+              VStack(spacing: 0) {
+                ForEach(Array(stride(from: max, to: min - 0.1, by: -0.1)), id: \.self) { num in
+                  Text(String(format: self.numberFormat, num))
+                    .foregroundColor(Color.gray)
+                    .font(.caption2)
+                    .frame(height: (geometry.size.width * 9 / 16) / CGFloat(self.temperatureUnit.symbol == UnitTemperature.celsius.symbol ? 15 : 20))
+                }
+              }
+              
+              ZStack {
+                Grid(min: self.min, max: self.max, length: self.cycleLength)
+                  .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                  .frame(width: geometry.size.width * 1.1 * self.zoom,
+                         height: geometry.size.width * 9 / 16)
+                  .aspectRatio(contentMode: .fit)
+                
+                LineGraph(dataPoints: temperatureData(unit: temperatureUnit), length: self.cycleLength)
+                  .stroke(Color.red, lineWidth: 2)
+                  .frame(width: geometry.size.width * 1.1 * self.zoom,
+                         height: geometry.size.width * 9 / 16)
+                  .aspectRatio(contentMode: .fit)
+                  .border(Color.accentColor, width: 1)
+              }
+            }
+            
+            HStack(spacing: 0) {
+              ForEach((1...self.cycleLength), id: \.self) {
+                Button("\($0)") {
+                  //action
+                }
+                .rotationEffect(.degrees(-45))
+                .font(.caption2)
+                .lineLimit(1)
+                .frame(width: (geometry.size.width * 1.1 * self.zoom) / CGFloat(self.cycleLength))
+              }
+            }
           }
         }
         
@@ -122,7 +154,8 @@ struct LineGraph: Shape {
       let start = dataPoints[0]
       p.move(to: CGPoint(x: 0, y: (1-start) * rect.height))
       for idx in dataPoints.indices {
-        p.addLine(to: point(at: idx))
+        let pt = point(at: idx)
+        p.addLine(to: pt)
       }
     }
   }
