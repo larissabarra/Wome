@@ -29,7 +29,7 @@ struct ContentView: View {
       }
       .tag(0)
       
-      ChartView(temps: temperatures)
+      ChartView(temperatures: temperatures)
       .tabItem {
         Label("Chart", systemImage: "calendar")
       }
