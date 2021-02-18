@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Cervix" representedClassName="Cervix" syncable="YES" codeGenerationType="class">
-        <attribute name="cervixPosition" optional="YES" attributeType="String"/>
-        <attribute name="cervixSoftness" optional="YES" attributeType="String"/>
-        <attribute name="cervixTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="measurementTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="softness" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Cycle" representedClassName="Cycle" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="days" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="cycle" inverseEntity="Day"/>
     </entity>
     <entity name="Day" representedClassName="Day" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -11,6 +17,7 @@
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="timezone" optional="YES" attributeType="String"/>
         <relationship name="cervix" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cervix"/>
+        <relationship name="cycle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cycle" inverseName="days" inverseEntity="Cycle"/>
         <relationship name="temperature" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Temperature"/>
     </entity>
     <entity name="Temperature" representedClassName="Temperature" syncable="YES" codeGenerationType="class">
@@ -19,8 +26,9 @@
         <attribute name="valueFahrenheit" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Cervix" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Day" positionX="-36" positionY="63" width="128" height="133"/>
-        <element name="Temperature" positionX="-54" positionY="63" width="128" height="88"/>
+        <element name="Cervix" positionX="107.65625" positionY="50.26171875" width="128" height="88"/>
+        <element name="Day" positionX="-157.30859375" positionY="33.5" width="128" height="148"/>
+        <element name="Temperature" positionX="108.06640625" positionY="177.5234375" width="128" height="88"/>
+        <element name="Cycle" positionX="-401.95703125" positionY="63.60546875" width="128" height="103"/>
     </elements>
 </model>
