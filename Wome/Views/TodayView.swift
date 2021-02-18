@@ -26,10 +26,12 @@ struct TodayView: View {
   var temperatureProxy: Binding<String> {
     Binding<String>(
       get: {
-        String(format: "%.2f", self.temperature)
+        String(self.temperature)
       },
       set: {
-        if let value = NumberFormatter().number(from: $0) {
+        let nf = NumberFormatter()
+        nf.maximumFractionDigits = self.temperatureUnit.symbol == UnitTemperature.celsius.symbol ? 2 : 1
+        if let value = nf.number(from: $0) {
           self.temperature = value.doubleValue
         }
       }
