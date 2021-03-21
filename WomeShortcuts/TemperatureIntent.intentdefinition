@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>INEnums</key>
+	<array/>
+	<key>INIntentDefinitionModelVersion</key>
+	<string>1.2</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>A6VxGf</string>
+	<key>INIntentDefinitionSystemVersion</key>
+	<string>19H2</string>
+	<key>INIntentDefinitionToolsBuildVersion</key>
+	<string>12D4e</string>
+	<key>INIntentDefinitionToolsVersion</key>
+	<string>12.4</string>
+	<key>INIntents</key>
+	<array>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>create</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDefaultImageName</key>
+			<string>Icon</string>
+			<key>INIntentDescription</key>
+			<string>Register today's temperature</string>
+			<key>INIntentDescriptionID</key>
+			<string>L9z1XB</string>
+			<key>INIntentInput</key>
+			<string>Temperature</string>
+			<key>INIntentKeyParameter</key>
+			<string>Temperature</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>7</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>Temperature</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Log ${Temperature} </string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>0cWJ8v</string>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>LogTemperature</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key>Temperature</key>
+				<dict>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>This will log ${Temperature}in ºC now</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>kea8H1</string>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Log ${Temperature} </string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>ZhHC42</string>
+				</dict>
+			</dict>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Temperature</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>kTBiMr</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultUnit</key>
+						<string>Celsius/Fahrenheit</string>
+						<key>INIntentParameterMetadataUnit</key>
+						<string>Any</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>Temperature</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>What's the temperature?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>2GmFXJ</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>Temperature</string>
+					<key>INIntentParameterUnsupportedReasons</key>
+					<array>
+						<dict>
+							<key>INIntentParameterUnsupportedReasonCode</key>
+							<string>negativeNumbersNotSupported</string>
+							<key>INIntentParameterUnsupportedReasonDefault</key>
+							<true/>
+							<key>INIntentParameterUnsupportedReasonFormatString</key>
+							<string>${displayName} can’t be negative.</string>
+							<key>INIntentParameterUnsupportedReasonFormatStringID</key>
+							<string>aEFoPi</string>
+						</dict>
+					</array>
+					<key>INIntentParameterWindowSize</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Temperature logged</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>anAaAY</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Temperature logged</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>8d6iwM</string>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Logging temperature failed</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>WvO7sF</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Logging temperature failed</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>a714la</string>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Log Temperature</string>
+			<key>INIntentTitleID</key>
+			<string>vBFUGz</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>Add</string>
+		</dict>
+	</array>
+	<key>INTypes</key>
+	<array/>
+</dict>
+</plist>

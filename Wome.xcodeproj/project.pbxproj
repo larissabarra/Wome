@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EADD15226040DDA001402E6 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EADD0F626040623001402E6 /* Intents.framework */; };
+		4EADD15526040DDA001402E6 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADD15426040DDA001402E6 /* IntentHandler.swift */; };
+		4EADD15926040DDA001402E6 /* WomeShortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EADD15126040DDA001402E6 /* WomeShortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4EADD17226079A12001402E6 /* Wome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C11025D1F0C400D9B8C4 /* Wome.xcdatamodeld */; };
+		4EADD17726079E9B001402E6 /* TemperatureIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADD13726040904001402E6 /* TemperatureIntentHandler.swift */; };
+		4EADD18026079EFD001402E6 /* TemperatureIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4EADD11C26040645001402E6 /* TemperatureIntent.intentdefinition */; };
+		4EADD1892607A648001402E6 /* TemperatureIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4EADD11C26040645001402E6 /* TemperatureIntent.intentdefinition */; };
+		4EADD1AA2607EBBA001402E6 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADD1A92607EBBA001402E6 /* CoreDataStorage.swift */; };
+		4EADD1AB2607EBBA001402E6 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EADD1A92607EBBA001402E6 /* CoreDataStorage.swift */; };
 		4EB5C10B25D1F0C400D9B8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C10A25D1F0C400D9B8C4 /* AppDelegate.swift */; };
 		4EB5C10D25D1F0C400D9B8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C10C25D1F0C400D9B8C4 /* SceneDelegate.swift */; };
 		4EB5C10F25D1F0C400D9B8C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5C10E25D1F0C400D9B8C4 /* ContentView.swift */; };
@@ -21,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4EADD15726040DDA001402E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB5C0FF25D1F0C400D9B8C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EADD15026040DDA001402E6;
+			remoteInfo = WomeShortcuts;
+		};
 		4EB5C12125D1F0C500D9B8C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EB5C0FF25D1F0C400D9B8C4 /* Project object */;
@@ -37,7 +53,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4EADD11626040623001402E6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4EADD15926040DDA001402E6 /* WomeShortcuts.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4EADD0F626040623001402E6 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		4EADD10126040623001402E6 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		4EADD11C26040645001402E6 /* TemperatureIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TemperatureIntent.intentdefinition; sourceTree = "<group>"; };
+		4EADD13726040904001402E6 /* TemperatureIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureIntentHandler.swift; sourceTree = "<group>"; };
+		4EADD15126040DDA001402E6 /* WomeShortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WomeShortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EADD15426040DDA001402E6 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		4EADD15626040DDA001402E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EADD17026079960001402E6 /* WomeShortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WomeShortcuts.entitlements; sourceTree = "<group>"; };
+		4EADD1712607996F001402E6 /* Wome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wome.entitlements; sourceTree = "<group>"; };
+		4EADD1A92607EBBA001402E6 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		4EB5C10725D1F0C400D9B8C4 /* Wome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB5C10A25D1F0C400D9B8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB5C10C25D1F0C400D9B8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +98,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4EADD14E26040DDA001402E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EADD15226040DDA001402E6 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB5C10425D1F0C400D9B8C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,12 +130,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EADD0F526040623001402E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EADD0F626040623001402E6 /* Intents.framework */,
+				4EADD10126040623001402E6 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EADD15326040DDA001402E6 /* WomeShortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				4EADD17026079960001402E6 /* WomeShortcuts.entitlements */,
+				4EADD13726040904001402E6 /* TemperatureIntentHandler.swift */,
+				4EADD11C26040645001402E6 /* TemperatureIntent.intentdefinition */,
+				4EADD15426040DDA001402E6 /* IntentHandler.swift */,
+				4EADD15626040DDA001402E6 /* Info.plist */,
+			);
+			path = WomeShortcuts;
+			sourceTree = "<group>";
+		};
+		4EADD1A82607EBA4001402E6 /* CoreDataUtils */ = {
+			isa = PBXGroup;
+			children = (
+				4EADD1A92607EBBA001402E6 /* CoreDataStorage.swift */,
+			);
+			path = CoreDataUtils;
+			sourceTree = "<group>";
+		};
 		4EB5C0FE25D1F0C400D9B8C4 = {
 			isa = PBXGroup;
 			children = (
+				4EADD1A82607EBA4001402E6 /* CoreDataUtils */,
 				4EB5C10925D1F0C400D9B8C4 /* Wome */,
 				4EB5C12325D1F0C500D9B8C4 /* WomeTests */,
 				4EB5C12E25D1F0C500D9B8C4 /* WomeUITests */,
+				4EADD15326040DDA001402E6 /* WomeShortcuts */,
+				4EADD0F526040623001402E6 /* Frameworks */,
 				4EB5C10825D1F0C400D9B8C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +178,7 @@
 				4EB5C10725D1F0C400D9B8C4 /* Wome.app */,
 				4EB5C12025D1F0C500D9B8C4 /* WomeTests.xctest */,
 				4EB5C12B25D1F0C500D9B8C4 /* WomeUITests.xctest */,
+				4EADD15126040DDA001402E6 /* WomeShortcuts.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +186,7 @@
 		4EB5C10925D1F0C400D9B8C4 /* Wome */ = {
 			isa = PBXGroup;
 			children = (
+				4EADD1712607996F001402E6 /* Wome.entitlements */,
 				4EB5C14525D337D500D9B8C4 /* Views */,
 				4EB5C10A25D1F0C400D9B8C4 /* AppDelegate.swift */,
 				4EB5C10C25D1F0C400D9B8C4 /* SceneDelegate.swift */,
@@ -156,6 +238,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4EADD15026040DDA001402E6 /* WomeShortcuts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EADD15A26040DDA001402E6 /* Build configuration list for PBXNativeTarget "WomeShortcuts" */;
+			buildPhases = (
+				4EADD14D26040DDA001402E6 /* Sources */,
+				4EADD14E26040DDA001402E6 /* Frameworks */,
+				4EADD14F26040DDA001402E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WomeShortcuts;
+			productName = WomeShortcuts;
+			productReference = 4EADD15126040DDA001402E6 /* WomeShortcuts.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4EB5C10625D1F0C400D9B8C4 /* Wome */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB5C13425D1F0C500D9B8C4 /* Build configuration list for PBXNativeTarget "Wome" */;
@@ -163,10 +262,12 @@
 				4EB5C10325D1F0C400D9B8C4 /* Sources */,
 				4EB5C10425D1F0C400D9B8C4 /* Frameworks */,
 				4EB5C10525D1F0C400D9B8C4 /* Resources */,
+				4EADD11626040623001402E6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4EADD15826040DDA001402E6 /* PBXTargetDependency */,
 			);
 			name = Wome;
 			productName = Wome;
@@ -218,6 +319,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					4EADD15026040DDA001402E6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					4EB5C10625D1F0C400D9B8C4 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -247,11 +351,19 @@
 				4EB5C10625D1F0C400D9B8C4 /* Wome */,
 				4EB5C11F25D1F0C500D9B8C4 /* WomeTests */,
 				4EB5C12A25D1F0C500D9B8C4 /* WomeUITests */,
+				4EADD15026040DDA001402E6 /* WomeShortcuts */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4EADD14F26040DDA001402E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB5C10525D1F0C400D9B8C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,14 +391,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4EADD14D26040DDA001402E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EADD1AB2607EBBA001402E6 /* CoreDataStorage.swift in Sources */,
+				4EADD15526040DDA001402E6 /* IntentHandler.swift in Sources */,
+				4EADD17726079E9B001402E6 /* TemperatureIntentHandler.swift in Sources */,
+				4EADD17226079A12001402E6 /* Wome.xcdatamodeld in Sources */,
+				4EADD18026079EFD001402E6 /* TemperatureIntent.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB5C10325D1F0C400D9B8C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EADD1AA2607EBBA001402E6 /* CoreDataStorage.swift in Sources */,
 				4EB5C10B25D1F0C400D9B8C4 /* AppDelegate.swift in Sources */,
 				4EB5C11225D1F0C400D9B8C4 /* Wome.xcdatamodeld in Sources */,
 				4EB5C15725D45B2E00D9B8C4 /* ChartView.swift in Sources */,
 				4EB5C10D25D1F0C400D9B8C4 /* SceneDelegate.swift in Sources */,
+				4EADD1892607A648001402E6 /* TemperatureIntent.intentdefinition in Sources */,
 				4EB5C14125D32EB800D9B8C4 /* TodayView.swift in Sources */,
 				4EB5C10F25D1F0C400D9B8C4 /* ContentView.swift in Sources */,
 			);
@@ -311,6 +437,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4EADD15826040DDA001402E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EADD15026040DDA001402E6 /* WomeShortcuts */;
+			targetProxy = 4EADD15726040DDA001402E6 /* PBXContainerItemProxy */;
+		};
 		4EB5C12225D1F0C500D9B8C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4EB5C10625D1F0C400D9B8C4 /* Wome */;
@@ -335,6 +466,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4EADD15B26040DDA001402E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WomeShortcuts/WomeShortcuts.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZS8FWUU79;
+				INFOPLIST_FILE = WomeShortcuts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lbarra.Wome.WomeShortcuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EADD15C26040DDA001402E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = WomeShortcuts/WomeShortcuts.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZS8FWUU79;
+				INFOPLIST_FILE = WomeShortcuts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lbarra.Wome.WomeShortcuts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4EB5C13225D1F0C500D9B8C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,8 +625,10 @@
 		4EB5C13525D1F0C500D9B8C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wome/Wome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Wome/Preview Content\"";
 				DEVELOPMENT_TEAM = AZS8FWUU79;
@@ -475,8 +648,10 @@
 		4EB5C13625D1F0C500D9B8C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wome/Wome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Wome/Preview Content\"";
 				DEVELOPMENT_TEAM = AZS8FWUU79;
@@ -576,6 +751,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4EADD15A26040DDA001402E6 /* Build configuration list for PBXNativeTarget "WomeShortcuts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EADD15B26040DDA001402E6 /* Debug */,
+				4EADD15C26040DDA001402E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4EB5C10225D1F0C400D9B8C4 /* Build configuration list for PBXProject "Wome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

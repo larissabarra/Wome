@@ -10,15 +10,15 @@ import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
-
+  let context = CoreDataStorage.mainQueueContext()
+  
   func scene(
     _ scene: UIScene,
     willConnectTo session: UISceneSession,
     options connectionOptions: UIScene.ConnectionOptions
   ) {
-    let context = persistentContainer.viewContext
     let contentView = ContentView().environment(\.managedObjectContext, context)
-
+    
     if let windowScene = scene as? UIWindowScene {
       let window = UIWindow(windowScene: windowScene)
       window.rootViewController = UIHostingController(rootView: contentView)
@@ -30,33 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func sceneDidEnterBackground(_ scene: UIScene) {
     saveContext()
   }
-
-  // MARK: - Core Data stack
-
-  lazy var persistentContainer: NSPersistentContainer = {
-    let container = NSPersistentContainer(name: "Wome")
-    container.loadPersistentStores { _, error in
-      if let error = error as NSError? {
-        // You should add your own error handling code here.
-        fatalError("Unresolved error \(error), \(error.userInfo)")
-      }
-    }
-    return container
-  }()
-
-  // MARK: - Core Data Saving support
-
+  
   func saveContext() {
-    let context = persistentContainer.viewContext
-    if context.hasChanges {
-      do {
-        try context.save()
-      } catch {
-        // The context couldn't be saved.
-        // You should add your own error handling here.
-        let nserror = error as NSError
-        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-      }
-    }
+    CoreDataStorage.saveContext(context)
   }
 }
